@@ -1,15 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/jobagent">Job Agent</router-link>
+      <JobHeader/>
+      
     </div>
     <router-view/>
   </div>
 </template>
 
-
+<script>
+import JobHeader from './components/JobHeader.vue'
+export default {
+  name:'',
+  components: {
+    JobHeader
+  }
+}
+</script>
 
 
 <style lang="scss">

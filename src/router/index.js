@@ -8,7 +8,8 @@ import FirstComponent from '../components/FirstComponent.vue'
 import JobList from '../components/JobList.vue'
 import Status from '../components/Status.vue'
 import Network from '../components/Network.vue'
-
+import SignupForm from '../components/SignUpForm.vue'
+import LogInForm from '../components/LogInForm.vue'
 
 Vue.use(VueRouter)
 
@@ -28,13 +29,17 @@ const routes = [
   },
   {
     path: '/jobagent',
-    name: 'JobAgent',
+   
     component: JobAgent,
     children: [
       
       {
         path: '',
         component: FirstComponent,
+      },
+      {
+        path: 'main',
+        component: FirstComponent
       },
       {
         path: 'list',
@@ -58,7 +63,16 @@ const routes = [
       }
     ]
   },
-  
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: SignupForm
+  },
+  {
+    path: '/login',
+    name: 'loginform',
+    component: LogInForm
+  },
 
 ]
 
